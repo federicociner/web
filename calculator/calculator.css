@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #f6f6f6;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.calculator {
+  max-width: 400px;
+  margin: auto;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.calculator-display {
+  background: black;
+  border: none;
+  box-shadow: none;
+  outline: none;
+
+  border-bottom: 2px solid black;
+  border-radius: 0px;
+  color: white;
+  font-size: 40px;
+  padding: 10px;
+  text-align: right;
+  width: 100%;
+}
+
+.calculator-keys {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 20px;
+}
+
+.key {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid black;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 22px;
+  padding: 20px;
+}
+
+.key.active {
+  background-color: cornsilk;
+}
+
+.key:active {
+  background-color: #f0f0f1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
+.key:hover,
+.key:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.key:hover {
+  transform: translateY(-1px);
+}
+
+.key-operator {
+  background-color: lightgray;
+  color: black;
+}
+
+.key-equal {
+  background-color: coral;
+  color: black;
+  grid-row: span 4;
+}

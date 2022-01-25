@@ -1,0 +1,17 @@
+.tab {
+  margin: auto;
+  background-color: lightgray;
+  border: 1px solid gray;
+}
+
+.tab button {
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: large;
+}
+
+.tab button.active {
+  background-color: aliceblue;
+}

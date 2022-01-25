@@ -1,0 +1,22 @@
+.tabcontent {
+  display: none;
+  height: 50vh;
+  padding: 10px;
+  animation: fadeEffect 1s;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+
+.tabcontent.active {
+  display: block;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

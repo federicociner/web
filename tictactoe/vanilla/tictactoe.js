@@ -53,7 +53,7 @@ function handleResultValidation(gameState) {
       continue;
     }
 
-    if (a == b && b == c) {
+    if (a === b && b === c) {
       roundWon = true;
       break;
     }
@@ -109,7 +109,6 @@ cells.forEach((cell) => cell.addEventListener("click", handleCellClick));
 
 // Add event listener for restart button
 restartButton.addEventListener("click", function () {
-  console.log("Restarting game...");
   const newGame = getInitialState();
 
   currentPlayer = newGame.currentPlayer;

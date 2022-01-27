@@ -1,0 +1,8 @@
+.game__board {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  grid-template-rows: repeat(3, 1fr);
+  height: 360px;
+  justify-content: center;
+  margin-bottom: 36px;
+}

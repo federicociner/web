@@ -1,0 +1,11 @@
+body {
+  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

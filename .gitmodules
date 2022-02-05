@@ -1,0 +1,3 @@
+[submodule "async/async-javascript-workshop"]
+	path = async/async-javascript-workshop
+	url = https://github.com/jawache/async-javascript-workshop.git

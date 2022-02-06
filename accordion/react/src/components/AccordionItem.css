@@ -1,0 +1,28 @@
+.accordion-item {
+  border: 1px solid black;
+  border-radius: 12px;
+  overflow: hidden;
+  min-width: 600px;
+}
+
+.accordion-title {
+  background-color: antiquewhite;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  font-size: 24px;
+  font-weight: 700;
+  justify-content: space-between;
+}
+
+.accordion-title:hover {
+  background-color: aliceblue;
+}
+
+.accordion-content {
+  background-color: whitesmoke;
+}
+.accordion-title,
+.accordion-content {
+  padding: 1rem;
+}

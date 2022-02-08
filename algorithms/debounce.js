@@ -1,25 +1,20 @@
-const debounce = (callback, wait) => {
+const debounce = (callback, delay) => {
   let debounceTimer;
 
   return function (...args) {
+    context = this;
     clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(() => callback.apply(this, args), wait);
+    debounceTimer = setTimeout(() => callback.apply(context, args), delay);
   };
 };
 
-function sayHello(firstName, lastName) {
-  console.log(`Hi, my name is ${firstName} ${lastName}!`);
-}
+let button = document.createElement("button");
+button.textContent = "Click me!";
+document.body.appendChild(button);
 
-function sayHelloMethod() {
-  console.log(`Hi, my name is ${this.name}!`);
-}
-
-const Fed = {
-  name: "Fed",
-  speak: debounce(sayHello, 1000),
-  speakMethod: debounce(sayHelloMethod, 2000),
-};
-
-Fed.speak("Billy", "Bob");
-Fed.speakMethod();
+button.addEventListener(
+  "click",
+  debounce(() => {
+    console.log("The time is: ", new Date().toUTCString());
+  }, 2000)
+);

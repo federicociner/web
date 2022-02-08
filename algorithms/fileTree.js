@@ -22,7 +22,7 @@ function buildFileTree(paths) {
   return result;
 }
 
-const result = [
+const expected = [
   { name: "test.txt", children: [] },
   {
     name: "components",
@@ -69,6 +69,6 @@ let paths = [
 ];
 
 assert(
-  JSON.stringify(buildFileTree(paths)) === JSON.stringify(result),
+  JSON.stringify(buildFileTree(paths)) === JSON.stringify(expected),
   "File trees do not match!"
 );

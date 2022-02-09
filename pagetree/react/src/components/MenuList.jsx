@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 const iconTypes = {
@@ -29,7 +29,7 @@ const MenuList = ({ data = [], defaultSelectedIds, handleClearDefaultIds }) => {
 const MenuItem = (props) => {
   const { id, name, childs, defaultSelectedIds, handleClearDefaultIds } = props;
   const isDefaultSelected = defaultSelectedIds ? defaultSelectedIds.includes(id) : false;
-  const [isExpanded, setIsExpanded] = useState(isDefaultSelected);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   let iconType = iconTypes.noChildren;
   if (childs && childs.length) {
@@ -57,6 +57,10 @@ const MenuItem = (props) => {
       handleClearDefaultIds();
     }
   };
+
+  useEffect(() => {
+    setIsExpanded(isDefaultSelected);
+  }, [isDefaultSelected]);
 
   return (
     <li role="option" tabIndex={0} aria-selected={isExpanded} onClick={handleClick} onKeyPress={handleKeyPress}>

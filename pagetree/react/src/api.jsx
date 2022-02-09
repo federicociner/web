@@ -12,6 +12,7 @@ const backendData = [
       {
         id: "8",
         name: "Onboarding Materials",
+        active: true,
       },
       {
         id: "9",
@@ -48,6 +49,7 @@ const backendData = [
           {
             id: "13",
             name: "Company Anniversary Celebration",
+            active: true,
           },
         ],
       },
